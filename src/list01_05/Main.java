@@ -2,7 +2,6 @@ package list01_05;
 
 public class Main {
 
-    /* リスト1-5 ここから */
     boolean isValidPlayerName(String name) {
         if(name.length() != 8) {                /* 文字数が8文字であること */
             return false;
@@ -19,6 +18,11 @@ public class Main {
         }
         return true;
     }
-    /* リスト1-5 ここまで */
 
+    public static void main(String... args){
+        Main main = new Main();
+        System.out.println("AAAAAAAA:" + main.isValidPlayerName("AAAAAAAA"));
+        System.out.println("AAAAAAAAA:" + main.isValidPlayerName("AAAAAAAAA"));
+    }
+    
 }

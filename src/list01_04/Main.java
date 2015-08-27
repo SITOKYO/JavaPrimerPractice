@@ -7,5 +7,6 @@ public class Main {
             sb.append("Java");      /* (1)バッファにJavaを追加 */
         }
         String s = sb.toString();   /* (2)完成した連結済み文字列を取り出す */
+        System.out.println(s.length());
     }
 }

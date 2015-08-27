@@ -6,6 +6,11 @@ public class Main {
     boolean isValidPlayerName(String name) {
         return name.matches("[A-Z][A-Z0-9]{7}");    /* 文字列パターン */
     }
-    /* リスト1-6 ここまで */
+
+    public static void main(String... args){
+        Main main = new Main();
+        System.out.println("AAAAAAAA:" + main.isValidPlayerName("AAAAAAAA"));
+        System.out.println("AAAAAAAAA:" + main.isValidPlayerName("AAAAAAAAA"));
+    }
 
 }
