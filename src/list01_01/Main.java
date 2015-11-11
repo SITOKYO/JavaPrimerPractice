@@ -1,5 +1,8 @@
 package list01_01;
 
+/**
+ * 文字列の操作（基本）
+ */
 public class Main { 
     public static void main(String[] args) {
         String s1 = "スッキリJava";

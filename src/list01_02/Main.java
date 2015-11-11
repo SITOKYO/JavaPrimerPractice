@@ -1,5 +1,8 @@
 package list01_02;
 
+/**
+ * 文字列の操作（基本）
+ */
 public class Main {
     public static void main(String[] args) {
         String s1 = "Java and JavaScript";

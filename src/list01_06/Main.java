@@ -1,5 +1,8 @@
 package list01_06;
 
+/**
+ * 文字列の操作（正規表現）
+ */
 public class Main {
 
     /* リスト1-6 ここから */

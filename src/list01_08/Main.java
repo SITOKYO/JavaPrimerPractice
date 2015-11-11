@@ -1,5 +1,8 @@
 package list01_08;
 
+/**
+ * 文字列の操作（置換）
+ */
 public class Main {
     public static void main(String[] args) {
         String s = "abc,def:ghi";

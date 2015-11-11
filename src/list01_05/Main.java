@@ -1,5 +1,8 @@
 package list01_05;
 
+/**
+ * 文字列の操作（文字列⇒文字の配列）
+ */
 public class Main {
 
     boolean isValidPlayerName(String name) {

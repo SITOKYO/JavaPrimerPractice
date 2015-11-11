@@ -1,5 +1,8 @@
 package list01_04;
 
+/**
+ * 文字列の操作（連結）
+ */
 public class Main {
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder();
