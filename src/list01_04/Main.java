@@ -5,11 +5,38 @@ package list01_04;
  */
 public class Main {
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder();
+
+        // Stringでの文字列結合
+        String string = "";
+        long start1 = System.currentTimeMillis();
         for(int i = 0; i < 10000; i++) {
-            sb.append("Java");      /* (1)バッファにJavaを追加 */
+            string = string + "Java";
         }
-        String s = sb.toString();   /* (2)完成した連結済み文字列を取り出す */
-        System.out.println(s.length());
+        long end1 = System.currentTimeMillis();
+        System.out.println("Stringで処理にかかった時間は..." +
+		(end1-start1) + "ミリ秒でした");
+        
+        // StringBuilderでの文字列結合
+        StringBuilder stringBuilder = new StringBuilder();
+        long start2 = System.currentTimeMillis();
+        for(int i = 0; i < 10000; i++) {
+            stringBuilder.append("Java");
+        }
+        long end2 = System.currentTimeMillis();
+        String s2 = stringBuilder.toString();
+        System.out.println("StringBuilderで処理にかかった時間は..." +
+		(end2-start2) + "ミリ秒でした");
+        
+        // StringBuilderでの文字列結合
+        StringBuffer stringBuffer = new StringBuffer();
+        long start3 = System.currentTimeMillis();
+        for(int i = 0; i < 10000; i++) {
+            stringBuffer.append("Java");
+        }
+        long end3 = System.currentTimeMillis();
+        String s3 = stringBuffer.toString();
+        System.out.println("StringBufferで処理にかかった時間は..." +
+		(end3-start3) + "ミリ秒でした");
+        
     }
 }

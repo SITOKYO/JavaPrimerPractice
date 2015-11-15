@@ -6,6 +6,7 @@ package list01_02;
 public class Main {
     public static void main(String[] args) {
         String s1 = "Java and JavaScript";
+        
         if(s1.contains("Java")) {
             System.out.println("文字列s1は、Javaを含んでいます");
         }
