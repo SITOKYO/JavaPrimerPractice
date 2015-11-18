@@ -3,20 +3,33 @@ package list03_03;
 import java.util.*;
 
 /**
- * コレクションフレームワーク（List）
+ * コレクションフレームワーク（List）繰り返し
  */
 public class Main {
     public static void main(String[] args) {
 	ArrayList<String> names = new ArrayList<String>();
-		
-        names.add("湊");
-        names.add("朝香");
-	names.add("菅原");
+        names.add("John ");
+        names.add("Paul ");
+	names.add("Michel ");
 	
-        Iterator<String> it = names.iterator();
-	    while (it.hasNext()) { /* 矢印を次に進められるなら繰り返す */
-		String e = it.next(); /* 矢印を次に進め、内容を取り出す */
-		System.out.println(e);
-	    }
+        System.out.println("従来型の繰り返し");
+        for (int i=0; i < names.size(); i++) {
+            System.out.print(names.get(i));
+        }
+        
+        System.out.println("\nIteratorによる繰り返し");
+        Iterator<String> iterator = names.iterator();
+	while (iterator.hasNext()) {
+	    String name = iterator.next();
+	    System.out.print(name);
 	}
+        
+        System.out.println("\n拡張for文による繰り返し");
+	for (String name: names) {
+	    System.out.print(name);
+	}
+        
+        System.out.println("\n関数型とラムダ式による繰り返し");
+        names.forEach(name -> System.out.print(name));
+    }
 }
