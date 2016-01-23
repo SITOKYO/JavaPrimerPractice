@@ -14,9 +14,7 @@ public class Main {
 	colors.add("黄");
         colors.add("黄");
         
-        // 拡張for文による繰り返し
-	for (String color : colors) {
-	    System.out.println(color);
-	}
+        // 関数による繰り返し（Java8以降）
+        colors.stream().forEach(System.out::println);
     }
 }

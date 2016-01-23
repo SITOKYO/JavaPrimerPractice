@@ -12,10 +12,10 @@ public class Main {
 	colors.put("blue", "青");
 	colors.put("yellow", "黄");
         
-        // 関数による繰り返し（Java8以降）
-        colors.keySet().stream().forEach((key) -> {
+        // 拡張for文による繰り返し
+        for(String key : colors.keySet()){
             String value = colors.get(key);
-            System.out.println(key + "の漢字は、" + value);
-        });
+            System.out.println(key + "の漢字は、" + value);         
+        }
     }
 }
