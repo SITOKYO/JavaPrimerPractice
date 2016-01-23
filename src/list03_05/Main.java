@@ -11,9 +11,12 @@ public class Main {
 	Set<String> colors = new HashSet<String>();
 	colors.add("赤");
 	colors.add("青");
-	colors.add("黄"); /* 赤・青・黄の順に格納 */
-	for (String s : colors) {
-	    System.out.print(s + "→");
+	colors.add("黄");
+        colors.add("黄");
+        
+        // 拡張for文による繰り返し
+	for (String color : colors) {
+	    System.out.println(color);
 	}
     }
 }

@@ -7,29 +7,18 @@ import java.util.*;
  */
 public class Main {
     public static void main(String[] args) {
-	ArrayList<String> names = new ArrayList<String>();
-        names.add("John ");
-        names.add("Paul ");
-	names.add("Michel ");
+	List<String> colors = new ArrayList<String>();	
+        colors.add("赤");
+        colors.add("青");
+	colors.add("黄");
+        colors.add(null);
+	colors.add("黄");
 	
-        System.out.println("従来型の繰り返し");
-        for (int i=0; i < names.size(); i++) {
-            System.out.print(names.get(i));
-        }
-        
-        System.out.println("\nIteratorによる繰り返し");
-        Iterator<String> iterator = names.iterator();
+        // イテレータによる繰り返し
+        Iterator<String> iterator = colors.iterator();
 	while (iterator.hasNext()) {
-	    String name = iterator.next();
-	    System.out.print(name);
+	    String color = iterator.next();
+	    System.out.println(color);
 	}
-        
-        System.out.println("\n拡張for文による繰り返し");
-	for (String name: names) {
-	    System.out.print(name);
-	}
-        
-        System.out.println("\n関数型とラムダ式による繰り返し");
-        names.forEach(name -> System.out.print(name));
     }
 }

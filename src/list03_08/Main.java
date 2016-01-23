@@ -7,13 +7,15 @@ import java.util.*;
  */
 public class Main {
     public static void main(String[] args) {
-	Map<String, Integer> prefs = new HashMap<String, Integer>();
-	prefs.put("京都府", 255);
-	prefs.put("東京都", 1261);
-	prefs.put("熊本県", 182);
-	for (String key : prefs.keySet()) { /* 県名一覧を取得し繰り返す */
-	    int value = prefs.get(key); /* 県名を指定し人口を取得 */
-	    System.out.println(key + "の人口は、" + value);
-	}
+	Map<String, String> colors = new HashMap<String, String>();
+	colors.put("red", "赤");
+	colors.put("blue", "青");
+	colors.put("yellow", "黄");
+        
+        // 関数による繰り返し（Java8以降）
+        colors.keySet().stream().forEach((key) -> {
+            String value = colors.get(key);
+            System.out.println(key + "の漢字は、" + value);
+        });
     }
 }
