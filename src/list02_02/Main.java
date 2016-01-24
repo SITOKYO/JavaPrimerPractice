@@ -16,9 +16,9 @@ public class Main {
 
         // ZonedDateTimeの利用方法
         System.out.println("東京:" + 
-            z1.getYear() + z1.getMonth() + z1.getDayOfMonth());
+            z1.getYear() + "年" + z1.getMonthValue() + "月" + z1.getDayOfMonth() + "日");
         System.out.println("ロンドン:" + 
-            z3.getYear() + z3.getMonth() + z3.getDayOfMonth());
+            z3.getYear() + "年" + z3.getMonthValue() + "月" + z3.getDayOfMonth() + "日");
         if(z1.isEqual(z3)) {   /* 同じ瞬間の判定にはequals()ではなくisEqual()を使う */
             System.out.println("これらは同じ瞬間を指しています");
         }
